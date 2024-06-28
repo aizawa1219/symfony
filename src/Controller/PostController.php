@@ -15,8 +15,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        $entityManager = $this->getDoctrine()->getManager();
- 
         $posts = $this->getDoctrine()
             ->getRepository(Post::class)
             ->findAll();
